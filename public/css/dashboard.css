@@ -1,0 +1,475 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('../camping-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    color: #2c3e50;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(102, 126, 234, 0.1);
+    backdrop-filter: blur(8px);
+    z-index: -1;
+}
+
+.header {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(20px);
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.header-top-signup {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0.5rem;
+}
+
+.signup-btn-top {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.3s ease;
+}
+
+.signup-btn-top:hover {
+    background: linear-gradient(135deg, #5a6fd8, #6a4190);
+    transform: translateY(-2px);
+}
+
+.header-top {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+    padding: 1rem;
+    flex-wrap: nowrap;
+}
+
+.club-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #2c3e50;
+    margin: 0 auto;
+    max-width: 70%;
+}
+
+.club-tagline-left {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    margin: 0.5rem auto 1.5rem auto;
+    max-width: 80%;
+}
+
+.club-logo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.club-tagline {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 0.8rem 0 1.5rem;
+    text-align: center;
+    margin-left: 15rem;  
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 1rem;
+    flex-wrap: nowrap; 
+}
+
+.nav-btn {
+    padding: 10px 20px;
+    border: none;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.nav-btn:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #5a6fd8, #6a4190);
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(2px);
+}
+
+.top-bar {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    padding: 1.5rem 2rem;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-title {
+    font-size: 1rem; 
+    font-weight: 500;
+    text-align: center;
+    color: #333;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.chatbot-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.chatbot-box {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.chatbot-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2, #f093fb, #f5576c, #4facfe);
+    background-size: 300% 100%;
+    animation: gradientMove 3s ease-in-out infinite;
+}
+
+@keyframes gradientMove {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.chatbot-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #444;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255,255,255,0.9);
+    border-radius: 25px;
+    padding: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.search-input {
+    flex: 1;
+    min-width: 0; 
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    background: rgba(255,255,255,0.8);
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    background: rgba(255,255,255,1);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.send-btn {
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.send-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.chatbox {
+    min-height: 400px;
+    max-height: 600px;
+    overflow-y: auto;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.message {
+    margin: 1rem 0;
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    max-width: 80%;
+    animation: slideIn 0.3s ease;
+    position: relative;
+}
+
+.message.user {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    margin-left: auto;
+    border-bottom-right-radius: 5px;
+}
+
+.message.bot {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    color: #333;
+    border-bottom-left-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.action-btn {
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.whatsapp-btn {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
+.call-btn {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.chat-btn {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* -------- Responsive Adjustments -------- */
+
+@media (max-width: 1024px) {
+    .club-title {
+        font-size: 2rem;
+        margin-left: 120px;   /* avoid logo overlap */
+        margin-right: 4rem;   /* adjust for smaller signup */
+        text-align: left;
+    }
+    .club-tagline-left {
+        margin-left: 120px;
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .club-logo {
+        width: 100px;
+        height: 100px;
+        left: 10px;
+        position: absolute;
+    }
+    .club-title {
+        font-size: 1.8rem;
+        margin-left: 100px;   /* shifted left for space */
+        margin-right: 3rem;   /* adjust for smaller signup */
+        text-align: left;
+    }
+    .club-tagline-left {
+        font-size: 1rem;
+        margin-left: 100px;
+        text-align: left;
+        max-width: 90%;
+    }
+    .nav-buttons {
+        flex-wrap: nowrap; 
+        gap: 8px;
+    }
+    .nav-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    .send-btn {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .club-logo {
+        width: 70px;
+        height: 70px;
+        left: 5px;
+    }
+    .club-title {
+        font-size: 1.3rem;
+        margin-left: 75px;  /* avoid overlap logo */
+        margin-right: 2.5rem; /* adjust for smaller signup */
+        text-align: left;
+    }
+    .club-tagline-left {
+        font-size: 0.9rem;
+        margin-left: 75px;
+        text-align: left;
+        max-width: 95%;
+    }
+    .nav-btn {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+    .send-btn {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
+/* Add to dashboard.css */
+.dashboard-footer {
+    background: rgba(255,255,255,0.8);
+    padding: 1.5rem;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.footer-title {
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+.footer-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 1rem 0;
+}
+
+
+.signup-btn-footer {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    /* Keep footer buttons horizontal like header */
+    .footer-buttons {
+        flex-direction: row;      /* Horizontal layout */
+        flex-wrap: wrap;          /* Wrap to next line if space is small */
+        justify-content: center;  /* Center align horizontally */
+        gap: 8px;                 /* Space between buttons */
+    }
+
+    .footer-buttons .nav-btn {
+        flex: 0 1 auto;           /* Allow buttons to shrink/grow */
+        min-width: 90px;          /* Prevent too small buttons */
+        padding: 6px 12px;        /* Adjust padding for small screens */
+        font-size: 12px;
+    }
+}

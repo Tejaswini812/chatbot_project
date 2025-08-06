@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Connect - Startup Village County</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <h1 class="club-title">Startup Village County</h1>
+            <img src="image.jpg.jpg" alt="Logo" class="club-logo">
+            <a href="signup.html" class="signup-btn-top">
+                <i class="fas fa-user-plus"></i> Sign Up
+            </a>
+        </div>
+        <p class="club-tagline-left">Innovation • Community • Growth</p>
+        <div class="nav-buttons">
+            <button class="nav-btn">Book a Lunch</button>
+            <button class="nav-btn">Find a Stay</button>
+            <button class="nav-btn">Host a Property</button>
+            <button class="nav-btn">Partner with Us</button>
+        </div>
+    </header>
+    <div class="main-content">
+        <div class="chatbot-container">
+            <div class="chatbot-box">
+                <div class="chatbot-title">
+                    <i class="fas fa-comments"></i> Connect with Members
+                </div>
+                <div class="search-container">
+                    <input type="text" id="userInput" class="search-input" placeholder="Enter User ID">
+                    <button onclick="sendMessage()" class="send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="chatbox" id="chatbox">
+                    <div class="message bot">
+                        👋 Welcome to Startup Village Club!  <br>Connect with members, share ideas, and grow your network.
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="dashboard-footer">
+        <div class="footer-content">
+            
+            <h2 class="footer-title">Startup Village County</h2>
+            <div class="footer-buttons">
+                <button class="nav-btn"> Smart Park </button>
+                <button class="nav-btn"> Cottages </button>
+                <button class="nav-btn"> Refer a Member </button>
+                <button class="nav-btn"> Report an Accident </button>
+            </div>
+            <a href="signup.html" class="signup-btn-footer">
+                <i class="fas fa-user-plus"></i> Sign Up
+            </a>
+        </div>
+    </footer>
+    <script src="js/dashboard.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/telephony.js"></script>
+</body>
+</html>

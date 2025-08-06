@@ -1,0 +1,32 @@
+{
+  "name": "chatbot-telephony-server",
+  "version": "1.0.0",
+  "description": "Full-stack chatbot and telephony integration with static frontend served via Express",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "telephony",
+    "twilio",
+    "chatbot",
+    "cloud-shoppe-connect"
+  ],
+  "author": "Startup Village Club",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "csv-parser": "^3.2.0",
+    "csv-writer": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "twilio": "^4.19.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
